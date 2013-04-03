@@ -35,7 +35,7 @@ function processForm()
     	
     		// from address
     	$from = "Dave <dave@dave.com>";
-        $emailMesage->setFrom("Dave <dave@dave.com");
+        $emailMesage->setFrom("Dave <dave@dave.com>");
 
         	// email subject and content
         $emailMesage->setSubject("Contact form example");
