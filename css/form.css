@@ -1,0 +1,64 @@
+
+.form-wrap {
+	width: 600px;
+	padding: 2em;
+	margin: 0 auto;
+}
+li {
+	margin-bottom: 1em;
+}
+
+
+/*
+- - - - BASIC FORM STYLES - - - - 
+*/
+label,
+input,
+textarea{
+	display:block;
+	margin-bottom:0.5em;
+	font-size:14px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea{
+	background:#fff;
+	border:1px solid #999;
+	padding:0.5em;
+	width:95%;
+	font-family:serif;
+}
+input[type="text"].error,
+input[type="password"].error,
+input[type="email"].error,
+textarea.error{
+	border-color:#cc0000;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus{
+	border-color:#222;
+	outline:none;
+}
+input[type="submit"]{
+	background:#999;
+	color:#fff;
+	text-transform:uppercase;
+	border:none;
+	font-family:sans-serif;
+	padding:0.5em 1.5em;
+	margin-top:1em;
+}
+input[type="submit"]:hover{
+	color:#fff;
+	background-color:#222;
+}
+input[type="submit"]:active{
+	background-color:#000;
+}
+#msg{
+	font-size:14px;
+	color:#a29061;
+}
