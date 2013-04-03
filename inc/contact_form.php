@@ -21,7 +21,6 @@ function processForm()
         $response = array(
               'ok' => false,
               'msg' => '<p>'.$errors.'</p>');
-        
         return $response;
     }  
    
@@ -34,7 +33,6 @@ function processForm()
 		$emailMesage->addToRecipient("Andy <andykleeman@gmail.com>");
     	
     		// from address
-    	$from = "Dave <dave@dave.com>";
         $emailMesage->setFrom("Dave <dave@dave.com>");
 
         	// email subject and content
@@ -62,30 +60,6 @@ function processForm()
    
     
     return $response;
-}
-
-function sendEmail($to, $from, $subject, $plain, $html)
-{
-    $emailMesage = new MDS_EmailSender_Message();
-    
-    try
-    {
-        $emailMesage->setFrom($from);
-        $emailMesage->addToRecipient($to);
-
-        $emailMesage->setSubject($subject);
-        $emailMesage->setPlainBody($plain);
-        $emailMesage->setHTMLBody($html);
-
-        $emailSender = new MDS_EmailSender();
-        $emailSender->setWinMailServer();
-        $emailSender->send($emailMesage);
-    
-    }
-    catch (MDS_EmailSender_Exception $e)
-    {
-        $success = false;
-    }
 }
 
 

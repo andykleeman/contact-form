@@ -8,7 +8,7 @@
  * An open source Email solution for PHP.
  *
  * @author		Mark P Haskins
- * @version     3.0
+ * @version     2.6
  * @copyright	Copyright (c) 2005 - 2011, MarksDevServer.com
  * @link		http://www.marksdevserver.com/mds_emailsender
  */
