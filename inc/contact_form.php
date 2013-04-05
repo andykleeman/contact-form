@@ -31,10 +31,10 @@ function processForm()
     try
     {
 	    	// to address
-		$emailMesage->addToRecipient("Andy <andykleeman@gmail.com>");
+		$emailMesage->addToRecipient("Your Name <you@emailaddress.com>");
     	
     		// from address
-        $emailMesage->setFrom("Dave <dave@dave.com>");
+        $emailMesage->setFrom($name." <".$email.">");
 
         	// email subject and content
         $emailMesage->setSubject("Contact form example");
@@ -46,7 +46,7 @@ function processForm()
 
         $emailSender = new MDS_EmailSender();
     /* 	
-    //	use this setting on windows servers
+    //	Use when sending via a Windows Mail Server
       	$emailSender->setWinMailServer();
     */
         $emailSender->send($emailMesage);
@@ -55,7 +55,7 @@ function processForm()
     {
         echo 'Error Code is : ' . $e->errorCode();
         echo 'Error Message is : ' . $e->errorMessage();
-        // You can find a list of the error codes at the bottom of the file in the Exception Class.
+        // you can find what the codes mean in the MDS_EmailSender.php file
         $success = false;
     }
     
@@ -69,7 +69,7 @@ function processForm()
 	} else {
 		    // FAILED
 	    $response = array(
-	          'ok' => true,
+	          'ok' => false,
 	          'msg' => "Sorry there was an error and your message has not been sent.");	
 	}
     
